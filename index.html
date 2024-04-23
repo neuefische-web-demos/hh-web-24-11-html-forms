@@ -8,10 +8,32 @@
   </head>
   <body>
     <h1>🎈 Happy Birthday, Jessica! 🎁</h1>
-    <h2>Private Birthday Party Picker</h2>
-    <p>
+    <h2 id="title">Private Birthday Party Picker</h2>
+    <p id="description">
       Let's celebrate Jessica's birthday! Please give me your name, email, your preferred party date
       and how many friends you will bring to Jessica's birthday party.
     </p>
+    <form aria-labelledby="title" aria-describedby="description">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="input-name">Name:</label>
+        <input id="input-name" type="text" name="name" minlength="4" required />
+        <label for="input-email">Email:</label>
+        <input id="input-email" type="email" name="email" required />
+      </fieldset>
+
+      <label for="input-date">Your favorite date:</label>
+      <input id="input-date" type="date" name="favorite-date" />
+
+      <label for="select-guests">How many friends will join you?</label>
+      <select id="select-guests" name="friends-to-join">
+        <option value="">--Please choose an option--</option>
+        <option value="single">I come alone.</option>
+        <option value="multiple">Maybe some?</option>
+        <option value="no-friends">I do not have friends.</option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
